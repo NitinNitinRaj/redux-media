@@ -4,7 +4,7 @@ export default function Skeleton({ className, times }) {
   const outerClassNames = classNames(
     "relative",
     "overflow-hidden",
-    "bg-gray",
+    "bg-gray-200",
     "mb-2.5",
     className
   );
