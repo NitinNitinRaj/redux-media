@@ -5,6 +5,7 @@ import Button from "./Button";
 import Skeleton from "./Skeleton";
 import { faker } from "@faker-js/faker";
 import { useEffect } from "react";
+import UserListItem from "./UserListItem";
 
 export default function UsersList() {
   const [doFetchUsers, isLoadingUsers, loadingUsersError] =
@@ -22,37 +23,28 @@ export default function UsersList() {
     doAddUser(name);
   };
 
-  if (isLoadingUsers) {
-    return <Skeleton className="h-10 w-full" times={6} />;
-  }
-
+  let content;
   if (loadingUsersError) {
-    return <div>Error fetching data...</div>;
+    content = <div>Error fetching data...</div>;
+  } else if (isLoadingUsers) {
+    content = <Skeleton className="h-10 w-full" times={6} />;
+  } else {
+    content = data.map((user) => {
+      return <UserListItem key={user.id} user={user} />;
+    });
   }
-
-  const renderedUsers = data.map((user) => {
-    return (
-      <div key={user.id} className="mb-2 border rounded">
-        <div className="flex p-2 justify-between items-center cursor-pointer">
-          {user.name}
-        </div>
-      </div>
-    );
-  });
 
   return (
     <div>
-      <div className="flex flex-row justify-between m-3">
+      <div className="flex flex-row justify-between items-center m-3">
         <h1 className="m-2 text-xl">Users</h1>
-        {isCreatingUsers ? (
-          "Creating User..."
-        ) : (
-          <Button onClick={handleAddUserClick}>+ Add User</Button>
-        )}
+        <Button loading={isCreatingUsers} onClick={handleAddUserClick}>
+          + Add User
+        </Button>
         {creatingUsersError && "Error creating user"}
       </div>
-      <div className="max-h-[calc(100vh-65px)] overflow-y-auto">
-        {renderedUsers}
+      <div className="max-h-[calc(100vh-65px)] overflow-y-auto mx-3">
+        {content}
       </div>
     </div>
   );

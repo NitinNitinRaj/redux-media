@@ -1,80 +1,16 @@
 {
   "users": [
     {
-      "name": "Bernice Medhurst",
-      "id": 1
-    },
-    {
-      "name": "Michelle Doyle",
-      "id": 2
-    },
-    {
-      "name": "Loren Johns",
-      "id": 3
-    },
-    {
-      "name": "Mr. Darnell Stoltenberg",
-      "id": 4
-    },
-    {
-      "name": "Clifford Erdman",
-      "id": 5
-    },
-    {
-      "name": "Agnes Heathcote V",
-      "id": 6
-    },
-    {
-      "name": "Rosie Jacobi II",
-      "id": 7
-    },
-    {
-      "name": "Peter Carter IV",
-      "id": 8
-    },
-    {
-      "name": "Geoffrey Howell",
-      "id": 9
-    },
-    {
-      "name": "Tara Runolfsdottir",
-      "id": 10
-    },
-    {
-      "name": "Travis Stokes",
-      "id": 11
-    },
-    {
-      "name": "Jeanette DuBuque",
-      "id": 12
-    },
-    {
       "name": "Rebecca Runolfsdottir",
       "id": 13
-    },
-    {
-      "name": "Shari Daniel",
-      "id": 14
     },
     {
       "name": "Jim Hauck",
       "id": 15
     },
     {
-      "name": "Velma Flatley",
-      "id": 16
-    },
-    {
       "name": "Elsa Volkman",
       "id": 17
-    },
-    {
-      "name": "Salvatore Aufderhar I",
-      "id": 18
-    },
-    {
-      "name": "Dr. Marta Kuphal",
-      "id": 19
     }
   ],
   "albums": [],
