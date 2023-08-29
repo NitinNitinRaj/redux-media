@@ -5,30 +5,39 @@
       "id": 1
     },
     {
-      "name": "Mattie Daniel",
-      "id": 5
+      "name": "Patti Lebsack",
+      "id": 2
     },
     {
-      "name": "Sue Pagac",
-      "id": 6
+      "name": "Wilbert Marks",
+      "id": 3
     },
     {
-      "name": "Laverne Luettgen",
-      "id": 7
-    },
-    {
-      "name": "Kent Reinger",
-      "id": 8
-    },
-    {
-      "name": "Johnathan Miller",
-      "id": 9
-    },
-    {
-      "name": "Kurt Hagenes IV",
-      "id": 10
+      "name": "Nettie Turcotte",
+      "id": 4
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 1,
+      "title": "Nature",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "title": "Animals",
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "title": "Birds",
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "title": "Cars",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
