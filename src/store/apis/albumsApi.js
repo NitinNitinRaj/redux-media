@@ -6,6 +6,7 @@ const albumsApi = createApi({
   endpoints(builder) {
     return {
       fetchAlbums: builder.query({
+        providesTags: ["Album"],
         query: (user) => {
           return {
             url: "/albums",
@@ -14,9 +15,22 @@ const albumsApi = createApi({
           };
         },
       }),
+      addAlbum: builder.mutation({
+        invalidatesTags: ["Album"],
+        query: (args) => {
+          return {
+            url: "/albums",
+            method: "POST",
+            body: {
+              userId: args.id,
+              title: args.title,
+            },
+          };
+        },
+      }),
     };
   },
 });
 
-export const { useFetchAlbumsQuery } = albumsApi;
+export const { useFetchAlbumsQuery, useAddAlbumMutation } = albumsApi;
 export { albumsApi };
