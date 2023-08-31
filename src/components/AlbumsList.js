@@ -15,7 +15,7 @@ export default function AlbumList({ user }) {
 
   let content;
   if (isFetching) {
-    content = <Skeleton times={3} className="h-10 w-full" />;
+    content = <Skeleton times={3} className="h-12 w-full" />;
   } else if (error) {
     content = <div>Error loading albums</div>;
   } else {
