@@ -21,7 +21,7 @@ export default function PhotosListItem({ photo }) {
     icon = (
       <GoXCircleFill
         onClick={handlePhotoDeleteClick}
-        className="absolute top-2 right-2 text-white bg-black border-2 rounded-full font-bold text-xl hover:font-bold cursor-pointer"
+        className="absolute top-2 right-2 text-white bg-black border-2 rounded-full font-bold text-xl hover:text-red-500 cursor-pointer"
       />
     );
   }
