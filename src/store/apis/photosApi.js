@@ -20,7 +20,7 @@ const photosApi = createApi({
       fetchPhotos: builder.query({
         providesTags: (result, error, album) => {
           const tags = result.map((photo) => ({ type: "Photo", id: photo.id }));
-          tags.push({ type: "PhotosAlbum", id: album.id });
+          tags.push({ type: "AlbumsPhotos", id: album.id });
           return tags;
         },
         query: (album) => {
@@ -33,7 +33,7 @@ const photosApi = createApi({
       }),
       addPhoto: builder.mutation({
         invalidatesTags: (result, error, photo) => [
-          { type: "PhotosAlbum", id: photo.albumId },
+          { type: "AlbumsPhotos", id: photo.albumId },
         ],
         query: (photo) => {
           return {
