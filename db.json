@@ -37,7 +37,48 @@
       "id": 4,
       "title": "Cars",
       "userId": 1
+    },
+    {
+      "userId": 4,
+      "title": "Recycled Bronze Sausages",
+      "id": 5
+    },
+    {
+      "userId": 4,
+      "title": "Modern Bronze Hat",
+      "id": 6
+    },
+    {
+      "userId": 4,
+      "title": "Sleek Cotton Mouse",
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "title": "Practical Wooden Bacon",
+      "id": 8
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "id": 1,
+      "albumId": 1,
+      "url": "https://loremflickr.com/640/480?lock=2072037065490432"
+    },
+    {
+      "id": 2,
+      "albumId": 2,
+      "url": "https://picsum.photos/seed/JVqAT/640/480"
+    },
+    {
+      "id": 3,
+      "albumId": 2,
+      "url": "https://picsum.photos/seed/xZx9m/640/480"
+    },
+    {
+      "id": 4,
+      "albumId": 1,
+      "url": "https://loremflickr.com/640/480?lock=3612803329949696"
+    }
+  ]
 }
