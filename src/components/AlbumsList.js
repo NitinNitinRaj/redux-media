@@ -6,15 +6,15 @@ import { faker } from "@faker-js/faker";
 import AlbumsListItem from "./AlbumsListItem";
 
 export default function AlbumList({ user }) {
-  const { data, error, isLoading, isFetching } = useFetchAlbumsQuery(user);
+  const { data, error, isFetching } = useFetchAlbumsQuery(user);
   const [addAlbum, results] = useAddAlbumMutation();
 
   const handleAddNewAlbum = () => {
-    addAlbum({ id: user.id, title: faker.commerce.productName() });
+    addAlbum({ userId: user.id, title: faker.commerce.productName() });
   };
 
   let content;
-  if (isLoading || isFetching) {
+  if (isFetching) {
     content = <Skeleton times={3} className="h-10 w-full" />;
   } else if (error) {
     content = <div>Error loading albums</div>;

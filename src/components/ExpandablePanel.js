@@ -8,17 +8,20 @@ export default function ExpandablePanel({ children, header }) {
   };
 
   const icon = expanded ? (
-    <GoTriangleLeft className="text-lg" />
+    <GoTriangleLeft
+      onClick={handleExpandClick}
+      className="text-lg  cursor-pointer"
+    />
   ) : (
-    <GoTriangleDown className="text-lg" />
+    <GoTriangleDown
+      onClick={handleExpandClick}
+      className="text-lg  cursor-pointer"
+    />
   );
 
   return (
     <div className="mb-2 border rounded">
-      <div
-        onClick={handleExpandClick}
-        className="flex p-2 items-center justify-between cursor-pointer"
-      >
+      <div className="flex p-2 items-center justify-between">
         <div className="flex justify-between items-center">{header}</div>
         {icon}
       </div>
