@@ -3,6 +3,7 @@ import Skeleton from "./Skeleton";
 import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
 import { faker } from "@faker-js/faker";
+import AlbumsListItem from "./AlbumsListItem";
 
 export default function AlbumList({ user }) {
   const { data, error, isLoading, isFetching } = useFetchAlbumsQuery(user);
@@ -19,19 +20,14 @@ export default function AlbumList({ user }) {
     content = <div>Error loading albums</div>;
   } else {
     content = data.map((album) => {
-      const header = <div>{album.title}</div>;
-      return (
-        <ExpandablePanel key={album.id} header={header}>
-          List of photos in the album
-        </ExpandablePanel>
-      );
+      return <AlbumsListItem key={album.id} album={album}></AlbumsListItem>;
     });
   }
 
   return (
     <div>
-      <div className="flex flex-row items-center justify-between pt-2">
-        <p>Albums of {user.name}</p>
+      <div className="flex flex-row items-center justify-between m-2">
+        <h3 className="font-bold">Albums of {user.name}</h3>
         {results.isError && <p>Error adding new album</p>}
         <Button loading={results.isLoading} onClick={handleAddNewAlbum}>
           + Add Album
